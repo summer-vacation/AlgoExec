@@ -7,6 +7,7 @@
    乘积最大子序列
    https://leetcode-cn.com/explore/interview/card/top-interview-quesitons-in-2018/264/array/1126/
 """
+import math
 
 
 class Solution:
@@ -32,9 +33,14 @@ class Solution:
                     if max < pre:
                         max = pre
 
-            return max
+    def maxProduct(self, A) -> int:
+        B = A[::-1]
+        for i in range(1, len(A)):
+            A[i] *= A[i - 1] or 1
+            B[i] *= B[i - 1] or 1
+        return max(max(A), max(B))
 
 
 if __name__ == '__main__':
-    print(Solution().maxProduct1([-2, 0, -1]))
+    print(Solution().maxProduct([-2,0,-1]))
 
