@@ -103,3 +103,15 @@ venv.bak/
 # mypy
 .mypy_cache/
 .idea
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+JavaExercise/.idea
+JavaExercise/out
+JavaExercise/JavaExercise.iml
+
