@@ -20,7 +20,7 @@ public class FizzBuzz {
         if (n == 0){
             return null;
         }
-        boolean flag_3 = false, flag_5 = false;
+
         for (int i=1; i <= n; i++){
             if (i%15 == 0){
                 res.add("FizzBuzz");
