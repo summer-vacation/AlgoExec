@@ -1,12 +1,12 @@
-package top.interview;
+package top.interview.DynamicProgramming;
 
 /***
  * https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/572/
  *
  * 找到最佳买卖股票的十几人，只允许交易一次
  */
-public class MaxProfit {
-    public MaxProfit(){
+public class BestTimeToBuyAndSellStock {
+    public BestTimeToBuyAndSellStock(){
 
     }
     public int maxProfit(int[] prices) {
@@ -28,6 +28,6 @@ public class MaxProfit {
 
     public static void main(String[] args) {
         int[] inout = new int[]{7,1,5,3,6,4};
-        System.out.println(new MaxProfit().maxProfit(inout));
+        System.out.println(new BestTimeToBuyAndSellStock().maxProfit(inout));
     }
 }

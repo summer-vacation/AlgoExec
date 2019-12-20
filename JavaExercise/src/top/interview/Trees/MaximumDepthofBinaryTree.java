@@ -1,7 +1,6 @@
-package top.interview;
+package top.interview.Trees;
 
 import java.util.ArrayDeque;
-import java.util.LinkedList;
 
 public class MaximumDepthofBinaryTree {
     public MaximumDepthofBinaryTree(){

@@ -1,4 +1,4 @@
-package top.interview;
+package top.interview.DynamicProgramming;
 
 /***
  * https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/569/

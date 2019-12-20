@@ -1,4 +1,4 @@
-package top.interview;
+package top.interview.Strings;
 
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {

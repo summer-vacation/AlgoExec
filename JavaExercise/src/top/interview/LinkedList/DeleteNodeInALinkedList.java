@@ -1,4 +1,4 @@
-package top.interview;
+package top.interview.LinkedList;
 
 public class DeleteNodeInALinkedList {
     public void deleteNode(ListNode node) {

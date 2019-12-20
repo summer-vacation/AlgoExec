@@ -1,8 +1,8 @@
-package top.interview;
+package top.interview.DynamicProgramming;
 
 
-public class MaxSubArray {
-    public MaxSubArray(){
+public class MaximumSubarray {
+    public MaximumSubarray(){
 
     }
 
@@ -46,6 +46,6 @@ public class MaxSubArray {
 
     public static void main(String[] args) {
         int[] input = new int[]{-2,-1};
-        System.out.println(new MaxSubArray().maxSubArray_dp(input));
+        System.out.println(new MaximumSubarray().maxSubArray_dp(input));
     }
 }
