@@ -1,6 +1,12 @@
 package top.interview.Strings;
 
 public class FirstUniqueCharacterInAString {
+
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
+     * @param s
+     * @return
+     */
     public int firstUniqChar(String s) {
         if (s.length() == 0 || s == null){
             return -1;

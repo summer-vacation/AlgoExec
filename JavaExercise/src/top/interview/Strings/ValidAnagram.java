@@ -1,6 +1,12 @@
 package top.interview.Strings;
 
 public class ValidAnagram {
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/882/
+     * @param s
+     * @param t
+     * @return
+     */
     public boolean isAnagram(String s, String t) {
         if (s.length() ==0 && t.length() == 0){
             return true;

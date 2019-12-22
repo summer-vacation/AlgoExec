@@ -1,11 +1,11 @@
-package top.interview;
+package top.interview.Design;
 
-import sun.jvm.hotspot.memory.PlaceholderEntry;
-
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * https://leetcode.com/explore/interview/card/top-interview-questions-easy/98/design/670/
+ */
 public class ShuffleAnArray {
     public int[] array;
     public ShuffleAnArray(int[] nums) {
