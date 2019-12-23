@@ -3,6 +3,7 @@ package top.interview.LinkedList;
 public class RemoveNthNodeFromEndofList {
     /**
      * 双指针，一个先跑，另一个间隔n再跑
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/93/linked-list/603/
      * @param head
      * @param n
      * @return

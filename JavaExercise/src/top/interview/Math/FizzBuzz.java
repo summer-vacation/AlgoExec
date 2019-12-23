@@ -1,6 +1,4 @@
-package top.interview;
-
-import sun.plugin.javascript.navig.Link;
+package top.interview.Math;
 
 import java.util.LinkedList;
 import java.util.List;

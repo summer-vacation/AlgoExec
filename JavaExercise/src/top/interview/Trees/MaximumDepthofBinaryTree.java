@@ -2,10 +2,18 @@ package top.interview.Trees;
 
 import java.util.ArrayDeque;
 
+/**
+ * https://leetcode.com/explore/interview/card/top-interview-questions-easy/94/trees/555/
+ */
 public class MaximumDepthofBinaryTree {
     public MaximumDepthofBinaryTree(){
     }
 
+    /**
+     * 递归
+     * @param root
+     * @return
+     */
     public int maxDepth(TreeNode root) {
         if (root == null){
             return 0;
@@ -19,7 +27,7 @@ public class MaximumDepthofBinaryTree {
     }
 
     /***
-     * 广度优先遍历
+     * 广度优先遍历,非递归
      * @param root
      * @return 深度
      */

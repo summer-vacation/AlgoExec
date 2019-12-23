@@ -1,7 +1,12 @@
-package top.interview;
+package top.interview.Strings;
 
 public class LongestCommonPrefix {
 
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/887/
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0){
             return "";

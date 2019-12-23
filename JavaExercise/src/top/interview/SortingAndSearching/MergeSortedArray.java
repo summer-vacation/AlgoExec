@@ -1,4 +1,4 @@
-package top.interview;
+package top.interview.SortingAndSearching;
 
 public class MergeSortedArray {
     public MergeSortedArray(){

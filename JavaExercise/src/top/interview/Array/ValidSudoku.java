@@ -1,8 +1,13 @@
-package top.interview;
+package top.interview.Array;
 
 import java.util.HashSet;
 
 public class ValidSudoku {
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/769/
+     * @param board
+     * @return
+     */
     public boolean isValidSudoku(char[][] board) {
         if (isValidCol(board) && isValidRow(board) && isValidPart(board)){
             return true;

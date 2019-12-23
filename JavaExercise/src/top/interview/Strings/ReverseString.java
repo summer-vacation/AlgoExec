@@ -1,6 +1,10 @@
-package top.interview;
+package top.interview.Strings;
 
 public class ReverseString {
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/
+     * @param s
+     */
     public void reverseString(char[] s) {
         if ((s.length == 0) || (s == null)){
             return;

@@ -1,6 +1,10 @@
-package top.interview;
+package top.interview.Array;
 
 public class RotateImage {
+    /**
+     * https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/770/
+     * @param matrix
+     */
     public void rotate(int[][] matrix) {
         int num = matrix.length;
         if(num <= 1){
