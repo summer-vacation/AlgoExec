@@ -15,20 +15,22 @@ public class ImplementstrStr {
             return 0;
         }
         char[] array = haystack.toCharArray();
-        int i = 0;
+        char[] array_needle = needle.toCharArray();
+        int i = 0, j = 0;
         for (i = 0; i < haystack.length() - needle.length()+1; i++){
-            StringBuilder sb = new StringBuilder();
-            for (int j = 0; j < needle.length(); j++){
-                sb.append(array[i + j]);
+            for (j = 0; j < needle.length(); j++){
+                if (array[i+j] != array_needle[j]){
+                   break;
+                }
             }
-            if (sb.toString().equals(needle)) return i;
+            if (j == needle.length()) return i;
         }
 
         return -1;
     }
 
     public static void main(String[] args) {
-        String haystack = "mississippi", needle = "mississippi";
+        String haystack = "heello", needle = "ll";
         System.out.println(new ImplementstrStr().strStr(haystack, needle));
     }
 }
