@@ -21,4 +21,7 @@ public class FirstBadVersion {
         }
     }
 
+    private boolean isBadVersion(int version){
+        return true;
+    }
 }

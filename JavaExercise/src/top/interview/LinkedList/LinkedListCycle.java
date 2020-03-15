@@ -6,6 +6,7 @@ package top.interview.LinkedList;
  * 1、如果没环，那么一定会有最后一个的next == null
  * 2、如果有环，那么一个快跑，一个慢跑，那么这两个一定会相遇
  * 剑指offer上的题
+ * PS：注意判断null的情况！容易造成NullPointerException
  */
 public class LinkedListCycle {
     public boolean hasCycle(ListNode head) {
