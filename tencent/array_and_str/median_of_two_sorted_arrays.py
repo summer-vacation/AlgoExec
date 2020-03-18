@@ -46,6 +46,21 @@ class Solution:
         else:
             return (temp[(len1+len2)//2 - 1] + temp[(len1+len2)//2])/2
 
+        """
+        更简单的做法：
+        1、合并list
+        2、排序list
+        3、找中数
+        nums1.extend(nums2)
+        nums1.sort()
+        length=len(nums1)
+        if length%2==1:
+            return nums1[length//2]
+        else:
+            return (nums1[length//2]+nums1[length//2-1])/2
+        
+        """
+
 
 if __name__ == '__main__':
     print(Solution().findMedianSortedArrays([1, 2], [1, 2, 3]))
