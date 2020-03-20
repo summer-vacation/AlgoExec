@@ -25,4 +25,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().maxProfit([1, 5, 5, 6]))
+    print(Solution().maxProfit([1, 5, 5, 6, 4, 10]))

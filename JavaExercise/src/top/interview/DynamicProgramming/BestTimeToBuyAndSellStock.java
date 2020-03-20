@@ -3,7 +3,7 @@ package top.interview.DynamicProgramming;
 /***
  * https://leetcode.com/explore/featured/card/top-interview-questions-easy/97/dynamic-programming/572/
  *
- * 找到最佳买卖股票的十几人，只允许交易一次
+ * 找到最佳买卖股票的时机，只允许交易一次
  */
 public class BestTimeToBuyAndSellStock {
     public BestTimeToBuyAndSellStock(){
