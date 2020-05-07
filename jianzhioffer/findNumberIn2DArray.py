@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-
-   File Name：     find_target_in_array
+   File Name：     findNumberIn2DArray
    Author :       jing
    Date：          2020/3/15
+
+   二维数组中的查找
+   https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/
 """
 
 
