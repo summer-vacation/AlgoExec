@@ -19,7 +19,7 @@ class Solution:
             return None
         result = []
         item = []
-        result.append(item)
+        result.append(list(item))
         if len(nums) == 0:
             return result
         self.generate(0, nums, item, result)
@@ -33,6 +33,35 @@ class Solution:
         self.generate(i + 1, nums, item, result)
         item.pop()
         self.generate(i + 1, nums, item, result)
+
+    def subsets2(self, nums):
+        if nums is None:
+            return []
+        res = []
+        cur = []
+        flag = [False for i in range(len(nums))]
+        self.help(nums, res, cur, flag)
+        result = []
+        for cur in res:
+            item = []
+            for i in range(len(cur)):
+                if cur[i] == "1":
+                    item.append(nums[i])
+            result.append(item)
+
+        return res, result
+
+    def help(self, nums, res, cur, flag):
+        if len(cur) == len(nums):
+            res.append(list(cur))
+            return
+        for i in range(len(nums)):
+            if not flag[i]:
+                flag[i] = True
+                cur.append(1)
+                self.help(nums, res, cur, flag)
+                cur[i] = 0
+                flag[i] = False
 
 
 if __name__ == '__main__':

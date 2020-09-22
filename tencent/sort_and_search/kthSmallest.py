@@ -6,6 +6,8 @@
    Date：          2020/3/19
 
    https://leetcode-cn.com/explore/interview/card/tencent/224/sort-and-search/929/
+
+   二叉搜索树中第K小的元素
 """
 
 from tencent.sort_and_search.TreeNode import TreeNode

@@ -20,6 +20,6 @@ class Solution:
         all_profit = 0
         for i in range(1, len(prices)):
             if prices[i] > prices[i - 1]:
-                all_profit += (prices[i] - prices[i - 1])
+                all_profit += (prices[i] - prices[i - 1])       # 所有增量的和
         return all_profit
 

@@ -48,7 +48,7 @@ class Solution:
         map = {')': '(', ']': '[', '}': '{'}
         stack = []
         for char in s:
-            if char in map:
+            if char in map.keys():
                 top = stack.pop() if stack else '#'
                 if map[char] != top:
                     return False
@@ -58,6 +58,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().isValid("(]"))
+    print(Solution().isValid2("(]"))
 
 

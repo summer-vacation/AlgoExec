@@ -6,6 +6,8 @@
    Date：          2020/3/19
 
    https://leetcode-cn.com/explore/interview/card/tencent/222/linked-list/916/
+
+   链表是否有环
 """
 from tencent.linkedlist.ListNode import ListNode
 

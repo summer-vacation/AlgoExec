@@ -26,4 +26,4 @@ class Solution:
 
 
 if __name__ == '__main__':
-    print(Solution().reverseWords("Let's take LeetCode contest"))
+    print(Solution().reverseWords2("Let's take LeetCode contest"))

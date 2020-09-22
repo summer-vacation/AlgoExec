@@ -15,7 +15,7 @@ from tencent.linkedlist.ListNode import ListNode
 """
     先计算长度
     
-    唱的链表先走，走到剩余长度一样时，再一起走，有相同就说明相交
+    长的链表先走，走到剩余长度一样时，再一起走，有相同就说明相交
 """
 
 
