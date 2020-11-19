@@ -13,9 +13,9 @@ https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/
 
 
 class Solution:
-    def maxSubArray(self, nums: List[int]) -> int:
-        if nums is None:
-            return -1
+    def maxSubArray(self, nums) -> int:
+        if nums is None or len(nums) == 0:
+            return 0
         elif len(nums) < 2:
             return nums[0]
         lens = len(nums)
@@ -23,7 +23,10 @@ class Solution:
         dp[0] = nums[0]
         max_val = nums[0]
         for i in range(1, lens):
-            dp[i] = max(dp[i-1] + nums[i], nums[i])
+            dp[i] = max(dp[i - 1] + nums[i], nums[i])
             max_val = max(max_val, dp[i])
         return max_val
 
+
+if __name__ == '__main__':
+    print(Solution().maxSubArray([1,2]))

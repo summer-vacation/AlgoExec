@@ -44,7 +44,7 @@ public class MaximumDepthofBinaryTree {
         while(!queue.isEmpty()){
             int size=queue.size();
             for(int i=0;i<size;i++){
-                TreeNode node=queue.removeFirst();
+                TreeNode node=queue.remove();
                 if(null!=node.left){
                     queue.add(node.left);
                 }

@@ -12,7 +12,7 @@ public:
         for(auto &&str : strs){
             auto x = str;
             std::sort(x.begin(), x.end());
-            
+
             if(umap.count(x)){
                 umap[x].push_back(str);
             } else {
@@ -21,7 +21,7 @@ public:
         }
         vector<vector<string>> res;
         for(auto i : umap){
-            res.push_back(i.second);
+            res.push_back(value);
         }
         return res;
     }

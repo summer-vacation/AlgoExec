@@ -1,0 +1,97 @@
+二叉搜索树的最近公共祖先  lowestCommonAncestor
+二叉树的最近公共祖先      lowestCommonAncestor02
+二叉树深度              maxDepth
+二叉搜索树中第K小的元素   kthSmallest
+二叉树中的最大路径和      maxPathSum
+二叉树中和为k的路径      sumKPath
+二叉搜索树中第K小的元素   kthSmallest
+前序、中序构造树         buildTree
+平和二叉树              isBalanced
+
+输的前序、中序、后序、层序遍历    Tree
+
+
+生成顺时针的回型矩阵     generate_matrix
+最大长度的回文子串       longest_palindrome
+是否含有重复元素         contains_duplicate
+有效的括号              is_valid
+字符串相乘              multiply
+反转单词                reverse_words
+顺时针打印螺旋矩阵       spiral_order
+除自身以外数组的乘积     product_except_self
+搜索旋转排序数组        search
+只出现一次的数          singleNumber、singleNumber02
+整数反转               reverse
+字符串反转              reverse_string
+字符串转整数            str_to_int
+数字是否是回文数         palindrome_number
+数组中的第K个最大元素    findKthLargest
+字符串的排列组合        permutation_str
+数组所有可能的子集       subsets
+数组中的第K个最大元素    findKthLargest
+最大、小的k个数         findKthLargest
+无重复字符的最长子串     longest_substring_without_repeating_characters
+最长上升子序列          lengthOfLIS
+颠倒二进制位            reverseBits
+打乱数组、洗牌算法       shuffle-an-array
+
+
+链表排序               sortList
+两个有序链表的中间节点   median_of_two_sorted_arrays
+链表相交的点            getIntersectionNode
+链表是否有环            hasCycle
+链表环的起点            detectCycle
+链表的中间结点          middleNode
+两数相加               addTwoNumbers
+链表的倒数第k个结点      getKthFromEnd
+删除倒数第N个结点       removeNthFromEnd
+移除链表元素            removeElements
+
+
+栈的弹出顺序是否存在     IsPopOrder
+
+
+小岛的个数         numIslands
+岛的最大面积       max-area-of-island
+最长公共子序列      longestCommonSubsequence
+
+
+前序、中序
+
+去重：
+1、 遍历
+li=[1,2,3,4,5,1,2,3]
+new_li=[]
+for i in li:
+    if i not in new_li:
+        new_li.append(i)
+print(new_li)
+
+2、set
+li=[1,2,3,4,5,1,2,3]
+new_li=list(set(li))
+new_li.sort(key=li.index)       # 保证顺序
+print(new_li)
+
+3、keys
+orgList = [1,0,3,7,7,5]
+#list()方法是把字符串str或元组转成数组
+formatList = list({}.fromkeys(orgList).keys())
+print (formatList)
+
+
+# 最长公共子串
+def LCstring(string1,string2):
+    len1 = len(string1)
+    len2 = len(string2)
+    res = [[0 for i in range(len1+1)] for j in range(len2+1)]
+    result = 0
+    for i in range(1,len2+1):
+        for j in range(1,len1+1):
+            if string2[i-1] == string1[j-1]:
+                res[i][j] = res[i-1][j-1]+1
+                result = max(result,res[i][j])
+    return result
+print(LCstring("helloworld","loop"))
+# 输出结果为：2
+
