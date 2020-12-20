@@ -8,35 +8,50 @@
    https://leetcode-cn.com/explore/interview/card/tencent/225/design/925/
 """
 
+
 class LRUCache:
 
     def __init__(self, capacity: int):
         self.cache = {}
         self.capacity = capacity
-        self.used = []
+        self.key = []
 
     def get(self, key: int) -> int:
-        if len(self.cache) == 0:
-            return -1
+        # 存在就get
         if key in self.cache.keys():
-            self.used.remove(key)
-            self.used.append(key)
+            self.key.remove(key)
+            self.key.append(key)
             return self.cache[key]
-        else:
-            return -1
+        return -1
 
     def put(self, key: int, value: int) -> None:
-        if len(self.cache) < self.capacity:
-            if key in self.used:
-                self.used.remove(key)
-            self.used.append(key)
-            self.cache[key] = value
-        else:
-            del_key = self.used[0]
-            self.cache.pop(del_key)
-            self.cache[key] = value
-            self.used.remove(del_key)
-            self.used.append(key)
+        if key in self.cache.keys():
+            if self.cache[key] != value:
+                self.cache[key] = value
+                self.key.remove(key)
+                self.key.append(key)
+        if key not in self.cache.keys():
+            if len(self.cache) < self.capacity:
+                self.cache[key] = value
+                self.key.append(key)
+            else:
+                # 找到最近最少用的
+                self.cache.pop(self.key[0])
+                self.key.remove(self.key[0])
+                self.cache[key] = value
+                self.key.append(key)
+
+
+class LRUCache2:
+
+    def __init__(self, capacity: int):
+        pass
+
+    def get(self, key: int) -> int:
+        pass
+
+    def put(self, key: int, value: int) -> None:
+        pass
 
 
 if __name__ == '__main__':
@@ -50,6 +65,13 @@ if __name__ == '__main__':
     print(cache.get(1))
     print(cache.get(3))
     print(cache.get(4))
+    # # print(cache.get(2))
+    # cache.put(2, 1)
+    # cache.put(2, 2)
+    # print(cache.get(2))
+    # cache.put(1, 1)
+    # cache.put(4, 1)
+    # print(cache.get(2))
 
 
 # >> > students = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]

@@ -10,17 +10,40 @@ https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in
 
 class Solution:
     def findTheLongestSubstring(self, s: str) -> int:
-        max_len = 0
-        start = 0
-        vowels = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
-        for index, c in enumerate(s):
-            if c in vowels.keys():
-                if vowels[c]%2 == 0:
-                    max_len = max(max_len, index - start + 1)
-                else:
-                    pass
-                vowels[c] += 1
+        for i in range(len(s), 0, -1):
+            for j in range(len(s) - i + 1):
+                sub = s[j:j + i]
+                has_odd_vowel = False
+                for vowel in ['a', 'e', 'i', 'o', 'u']:
+                    if sub.count(vowel) % 2 != 0:
+                        has_odd_vowel = True
+                        break
+                if not has_odd_vowel: return i
+        return 0
+
+    def findTheLongestSubstring2(self, s: str) -> int:
+        mapper = {
+            "a": 1,
+            "e": 2,
+            "i": 4,
+            "o": 8,
+            "u": 16
+        }
+        seen = {0: -1}
+        res = cur = 0
+
+        for i, c in enumerate(s):
+            if c in mapper:
+                cur ^= mapper.get(c)
+                # 全部奇偶性都相同，相减一定都是偶数
+            if cur in seen:
+                # cur==0，res+1    元音偶数个，非元音
+                # cur!=0, max(之前最大，当前位置-上一次非偶数元音起点)
+                res = max(res, i - seen.get(cur))
             else:
-                max_len += 1
+                seen[cur] = i
+        return res
 
 
+if __name__ == '__main__':
+    print(Solution().findTheLongestSubstring2("eleetminicoworoep"))

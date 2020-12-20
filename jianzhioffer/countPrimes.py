@@ -13,6 +13,8 @@
 
 class Solution:
     def countPrimes(self, n: int) -> int:
+        if n < 2:
+            return 0
         is_primes = [True for i in range(n)]
         is_primes[0] = False
         is_primes[1] = False
@@ -33,5 +35,5 @@ class Solution:
         return count
 
 
-print(Solution().countPrimes(10))
+print(Solution().countPrimes(11))
 
